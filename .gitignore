@@ -15,7 +15,8 @@
 
 # production
 /build
-
+/products
+/public/products
 # misc
 .DS_Store
 *.pem

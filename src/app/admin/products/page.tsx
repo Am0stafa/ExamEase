@@ -1,10 +1,25 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import { PageHeader } from "../_components/pageHeader";
-import { Link, Table } from "lucide-react";
-import { TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { formatCurrency, formatNumber } from "@/lib/formatters";
-import db from "@/db/db";
-
+import Link from "next/link"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import db from "@/db/db"
+import { CheckCircle2, MoreVertical, XCircle } from "lucide-react"
+import { formatCurrency, formatNumber } from "@/lib/formatters"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ActiveToggleDropdownItem, DeleteDropdownItem } from "../_components/ProductActions";
 
 export default function AdminProductsPage() {
   return (
