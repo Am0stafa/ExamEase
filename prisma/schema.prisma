@@ -20,8 +20,8 @@ model Product {
   updatedAt DateTime @updatedAt
   orders    Order[]
   downloadVerification DownloadVerification[]
-
 }
+
 model User {
   id        String     @id @default(uuid())
   name      String?

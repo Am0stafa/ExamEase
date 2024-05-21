@@ -12,10 +12,8 @@ import { Product } from "@prisma/client"
 import Image from "next/image"
 
 export function ProductForm({ product }: { product?: Product | null }) {
-  const [error, action] = useFormState(addProduct,{})
-  const [priceInCents, setPriceInCents] = useState<number | undefined>(
-    product?.priceInCents
-  )
+  const [error, action] = useFormState(product == null ? addProduct : updateProduct.bind(null, product.id), {});
+  const [priceInCents, setPriceInCents] = useState<number | undefined>(product?.priceInCents)
 
   return (
     <form action={action} className="space-y-8">
@@ -51,7 +49,6 @@ export function ProductForm({ product }: { product?: Product | null }) {
           id="description"
           name="description"
           required
-          // defaultValue={product?.description}
         />
       </div>
 
@@ -66,14 +63,9 @@ export function ProductForm({ product }: { product?: Product | null }) {
       <div className="space-y-2">
         <Label htmlFor="image">Image</Label>
         <Input type="file" id="image" name="image" required={product == null} />
-        {/* {product != null && (
-          <Image
-            src={product.imagePath}
-            height="400"
-            width="400"
-            alt="Product Image"
-          />
-        )} */}
+        {product != null && (
+          <Image src={product.imagePath ?? ''} height="400" width="400" alt="Product Image" />
+        )}
       </div>
       
       <SubmitButton />
