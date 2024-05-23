@@ -18,7 +18,6 @@ import {
 import { MoreVertical } from "lucide-react"
 import { PageHeader } from "../_components/pageHeader"
 
-
 function getOrders() {
   return db.order.findMany({
     select: {
