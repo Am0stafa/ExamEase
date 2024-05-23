@@ -1,4 +1,5 @@
-import {auth} from '@/auth'
+import { auth } from "../../../../auth"
+
 
 const DashboardPage = async () => {
     const session = await auth()

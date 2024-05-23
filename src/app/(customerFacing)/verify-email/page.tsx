@@ -1,5 +1,4 @@
 import VerifyEmailForm from '@/components/verify-email-form'
-import React from 'react'
 
 const VerifyEmailPage = () => {
   return (

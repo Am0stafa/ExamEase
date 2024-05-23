@@ -1,11 +1,11 @@
 "use server";
 import * as z from "zod";
 
-import { getUserByEmail } from "@/data/user";
 
 import { AuthError } from "next-auth";
 import { LoginSchema } from "../../schemas";
 import { signIn } from "../../auth";
+import { getUserByEmail } from "../../data/user";
 
 export const login = async (data: z.infer<typeof LoginSchema>) => {
   // Validate the input data
