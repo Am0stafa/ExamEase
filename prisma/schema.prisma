@@ -25,11 +25,22 @@ model Product {
 model User {
   id        String     @id @default(uuid())
   name      String?
-  email     String @unique
+  email String @unique
+  emailVerified DateTime?
+  password String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   orders    Order[]
 }
+
+model VerificationToken {
+  id        String     @id @default(uuid())
+  email String
+  token String
+  expires DateTime
+  @@unique([email, token])
+}
+
 
 model Order {
   id        String     @id @default(uuid())
