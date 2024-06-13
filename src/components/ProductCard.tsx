@@ -32,11 +32,11 @@ export function ProductCard({
       <Image src={imagePath || ""} fill alt={name} />
       </div>
       <CardHeader>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle>Name: {name}</CardTitle>
         <CardDescription>{formatCurrency(priceInCents / 100)}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="line-clamp-4">{description}</p>
+        <p className="line-clamp-4">institute: {description}</p>
       </CardContent>
       <CardFooter>
         <Button asChild size="lg" className="w-full">

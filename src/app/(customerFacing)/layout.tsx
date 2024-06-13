@@ -14,7 +14,7 @@ export default function Layout({
         <div className="flex justify-between items-center">
           <div>
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/products">Products</NavLink>
+            <NavLink href="/products">Certificate</NavLink>
             <NavLink href="/orders">My Orders</NavLink>
           </div>
           <div>

@@ -20,7 +20,7 @@ async function isAuthenticated(req: NextRequest) {
     .split(":")
 
   return (
-    username === 'admin' && password === 'admin'
+    username === 'admin' && password === 'admins'
   )
 }
 

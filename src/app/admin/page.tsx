@@ -64,7 +64,7 @@ export default async function AdminPage() {
       />
       {/* products */}
       <DashboardCard
-        title="Active Products"
+        title="Active Certificate"
         subtitle={`${formatNumber(productData.inactiveCount)} Inactive certificates `}
         body={`${formatNumber(productData.activeCount)}`}
       />
